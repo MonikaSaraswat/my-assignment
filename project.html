@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Flexbox Concepts</title>
+    <style>.flexbox{display:flex;}.flexbox{border-left-width:.010416667in;}.flexbox{border-bottom-width:.010416667in;}.flexbox{border-right-width:.010416667in;}.flexbox{border-top-width:.010416667in;}.flexbox{border-left-style:solid;}.flexbox{border-bottom-style:solid;}*{box-sizing:border-box;}.flexbox{border-right-style:solid;}body{font-family:Arial,sans-serif;}.flexbox{border-top-style:solid;}body{margin-left:0;}.flexbox{border-left-color:#ccc;}.flexbox{border-bottom-color:#ccc;}.flexbox{border-right-color:#ccc;}.flexbox{border-top-color:#ccc;}.flexbox{border-image:none;}.flexbox{padding-left:7.5pt;}body{margin-bottom:0;}body{margin-right:0;}.flexbox{padding-bottom:7.5pt;}body{margin-top:0;}[class~=box],body{padding-left:15pt;}.flexbox{padding-right:7.5pt;}.flexbox{padding-top:7.5pt;}.flexbox{margin-top:.625pc;}[class~=box],body{padding-bottom:15pt;}.flexbox{min-height:75pt;}.flexbox{gap:7.5pt;}[class~=box]{background-color:lightblue;}[class~=box],body{padding-right:15pt;}[class~=box],body{padding-top:20px;}[class~=box],h1{text-align:center;}[class~=box]{border-left-width:.010416667in;}[class~=box],h2{border-bottom-width:.010416667in;}[class~=box]{border-right-width:.010416667in;}[class~=box]{border-top-width:.010416667in;}[class~=box]{border-left-style:solid;}[class~=box],h2{border-bottom-style:solid;}h1,section{margin-bottom:30pt;}[class~=box]{border-right-style:solid;}[class~=box]{border-top-style:solid;}[class~=box]{border-left-color:#888;}[class~=box]{border-bottom-color:#888;}[class~=box]{border-right-color:#888;}[class~=box]{border-top-color:#888;}h2{margin-bottom:10px;}[class~=box]{border-image:none;}[class~=wrap-example]{flex-wrap:wrap;}.column-example{flex-direction:column;}[class~=justify-center]{justify-content:center;}.justify-space-between{justify-content:space-between;}[class~=align-center]{align-items:center;}[class~=align-center]{height:200px;}h2{border-bottom-color:#ddd;}[class~=box-grow]{flex-grow:1;}[class~=box-grow-2]{flex-grow:2;}[class~=box-shrink]{flex-shrink:1;}h2{border-image:none;}[class~=box-basis]{flex-basis:1.5625in;}.order-1{order:1;}h2{padding-bottom:5px;}.order-2{order:2;}[class~=align-self-start]{align-self:flex-start;}[class~=align-self-end]{align-self:flex-end;}</style
+</head><link rel="stylesheet" href="project.css">
+<body>
+
+  <h1>All Flexbox Concepts - Basic HTML Demo</h1>
+
+  <!-- Display: flex -->
+  <section>
+    <h2>1. Display: Flex</h2>
+    <p>This enables Flexbox layout on a container.</p>
+    <div class="flexbox">
+      <div class="box">Item 1</div>
+      <div class="box">Item 2</div>
+      <div class="box">Item 3</div>
+    </div>
+  </section>
+
+  <!-- Flex-direction -->
+  <section>
+    <h2>2. Flex Direction</h2>
+    <p>Direction of the main axis (row by default)</p>
+    <div class="flexbox column-example">
+      <div class="box">Column 1</div>
+      <div class="box">Column 2</div>
+      <div class="box">Column 3</div>
+    </div>
+  </section>
+  
+  <!-- Justify Content -->
+  <section>
+    <h2>3. Justify Content</h2>
+    <p>Controls alignment along the main axis (horizontal if flex-direction is row)</p>
+    <div class="flexbox justify-center">
+      <div class="box">Center</div>
+      <div class="box">Aligned</div>
+    </div>
+
+    <div class="flexbox justify-space-between">
+      <div class="box">Start</div>
+      <div class="box">End</div>
+    </div>
+  </section>
+
+  <!-- Align Items -->
+  <section>
+    <h2>4. Align Items</h2>
+    <p>Controls alignment along the cross axis (vertical if flex-direction is row)</p>
+    <div class="flexbox align-center">
+      <div class="box">Top</div>
+      <div class="box" style="height: 100px;">Tall</div>
+      <div class="box">Short</div>
+    </div>
+  </section>
+
+  <!-- Flex Wrap -->
+  <section>
+    <h2>5. Flex Wrap</h2>
+    <p>Allows items to wrap into multiple lines.</p>
+    <div class="flexbox wrap-example">
+      <div class="box" style="width: 200px;">Box 1</div>
+      <div class="box" style="width: 200px;">Box 2</div>
+      <div class="box" style="width: 200px;">Box 3</div>
+      <div class="box" style="width: 200px;">Box 4</div>
+    </div>
+  </section>
+
+  <!-- Gap -->
+  <section>
+    <h2>6. Gap</h2>
+    <p>Space between items (row and column gap)</p>
+    <div class="flexbox" style="gap: 20px;">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+  </section>
+
+  <!-- Flex Grow -->
+  <section>
+    <h2>7. Flex Grow</h2>
+    <p>Defines how much a flex item will grow relative to the others.</p>
+    <div class="flexbox">
+      <div class="box box-grow">Grow 1</div>
+      <div class="box box-grow-2">Grow 2</div>
+      <div class="box">No Grow</div>
+    </div>
+  </section>
+
+  <!-- Flex Shrink -->
+  <section>
+    <h2>8. Flex Shrink</h2>
+    <p>Defines how a flex item will shrink if necessary.</p>
+    <div class="flexbox" style="width: 300px;">
+      <div class="box box-shrink" style="width: 200px;">Shrink</div>
+      <div class="box" style="width: 200px;">No Shrink</div>
+    </div>
+  </section>
+
+  <!-- Flex Basis -->
+  <section>
+    <h2>9. Flex Basis</h2>
+    <p>Sets the initial size of a flex item before space is distributed.</p>
+    <div class="flexbox">
+      <div class="box box-basis">150px Basis</div>
+      <div class="box">Auto</div>
+    </div>
+  </section>
+
+  <!-- Order -->
+  <section>
+    <h2>10. Order</h2>
+    <p>Controls the order in which items appear (visually)</p>
+    <div class="flexbox">
+      <div class="box order-2">Order 2</div>
+      <div class="box order-1">Order 1</div>
+      <div class="box">Default</div>
+    </div>
+  </section>
+
+  <!-- Align Self -->
+  <section>
+    <h2>11. Align Self</h2>
+    <p>Overrides align-items for individual items.</p>
+    <div class="flexbox align-center" style="height: 150px;">
+      <div class="box align-self-start">Top</div>
+      <div class="box">Center</div>
+      <div class="box align-self-end">Bottom</div>
+    </div>
+  </section>
